@@ -222,7 +222,14 @@ Return ONLY a valid JSON object with the following structure (no markdown fences
 `;
 
   const candidateModels = ["gemini-3.5-flash", "gemini-3.6-flash", "gemini-flash-latest"];
-  let data: any = null;
+  interface GeminiApiResponse {
+    candidates?: Array<{
+      content?: {
+        parts?: Array<{ text?: string }>;
+      };
+    }>;
+  }
+  let data: GeminiApiResponse | null = null;
   let lastError: Error | null = null;
 
   for (const model of candidateModels) {
