@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CatalogAI 🛍️✨
 
-## Getting Started
+> **Intelligent Product Cataloging for Small Online Businesses**  
+> Generate compelling titles, descriptions, SEO metadata, search tags, and social media captions with strict anti-hallucination guardrails.
 
-First, run the development server:
+CatalogAI helps small e-commerce merchants and independent makers transform raw product photos and basic notes into high-converting product listings in seconds.
+
+---
+
+## ✨ Features
+
+- **📸 Image Upload & Instant Preview**: Upload product photography via drag-and-drop or select from built-in sample presets with responsive previews.
+- **🛡️ Anti-Hallucination Guardrails**: Strictly forbids fabricating unverified specifications (Material, Dimensions, Certifications, Brand). Missing details are flagged for user confirmation.
+- **✍️ Editable AI Content Suite**:
+  - **Compelling Titles** with character count tracking
+  - **Short Descriptions** optimized for catalog listing cards
+  - **Detailed Descriptions** with narrative storytelling and formatted feature bullets
+  - **Suggested Categories** mapped to retail departments
+  - **Search Tags** with interactive pill removal and custom tag creation
+  - **SEO Meta Description** with a live Google SERP snippet preview and 160-char gauge
+  - **Instagram Caption** with simulated post preview, emojis, hashtags, and one-click copy
+- **🎨 Polished Downloadable Marketing Cards**: Export high-resolution (2x retina) product graphics in Square (1:1) or Portrait (4:5) format as PNG or JPEG.
+- **📊 Searchable Catalog Grid**: Filter by category, price, and search query across titles, descriptions, and tags.
+- **📁 CSV Export**: 1-click RFC-4180 compliant CSV export compatible with Shopify, WooCommerce, and spreadsheet tools.
+- **🔒 Server-Side AI Security**: API keys (`GEMINI_API_KEY`) stay strictly on the server; includes an offline fallback engine for zero-setup local demonstration.
+- **📦 Pre-Loaded Demo Data**: Includes 4 artisanal demo products clearly labeled with "Demo Data" badges.
+
+---
+
+## 🚀 Quick Start
+
+### 1. Clone & Install Dependencies
+
+```bash
+git clone https://github.com/chyousuf/catalog-ai.git
+cd catalog-ai
+npm install
+```
+
+### 2. Configure Environment (Optional)
+
+CatalogAI works out-of-the-box using its built-in context-aware engine. To enable live Google Gemini AI generation:
+
+```bash
+cp .env.example .env.local
+```
+
+Add your Google Gemini API key:
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+*(Get a free key from [Google AI Studio](https://aistudio.google.com/app/apikey))*
+
+### 3. Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router, Server Route Handlers)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) with purple & slate aesthetic
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Image Generation**: [html-to-image](https://github.com/bubkoo/html-to-image)
+- **Effects**: [canvas-confetti](https://github.com/catdad/canvas-confetti)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT © [chyousuf](https://github.com/chyousuf)
